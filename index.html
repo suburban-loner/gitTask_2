@@ -1,306 +1,335 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Online Shopping Page</title>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <!-- Custom CSS -->
-        <style>
-            .product-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: transform .2s;
-            }
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Online Shopping Page</title>
+            <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+            <!-- Custom CSS -->
+            <style>
+                .product-image {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                transition: transform .2s;
+                }
 
-            .product-image:hover {
-            transform: scale(1.1);
-            }
+                .product-image:hover {
+                transform: scale(1.1);
+                }
 
-            .product-name {
-            font-weight: bold;
-            }
-        </style>
-    </head>
+                .product-name {
+                font-weight: bold;
+                }
+            </style>
+        </head>
 
-    <body class="bg-light">
+        <body class="bg-light">
 
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-md navbar-light">
-        <!-- navbar links -->
-        <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="#shirts" class="nav-link">Shirts</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#pants" class="nav-link">Pants</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#jackets" class="nav-link">Jackets</a>
-                </li>
-                <li class="nav-item d-md-none">
-                    <a href="#shoes" class="nav-link">Shoes</a>
-                </li>
-                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
-                    Log In
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div>
+                    <a href="#intro" class="navbar-brand">
+                    <span class="fw-bold text-secondary">
+                        <i class="bi bi-shop"></i>
+                        Genesis Foundation
+                    </span>
+                </a>
+                <!-- toggle button-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-            </ul>
-        </div> 
-    </nav>
-
-    <!-- main intro text -->
-    <section class="id-intro bg-dark">
-        <div class="container-lg">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-md-5 text-center text-md-start">
-                    <h1>
-                        <div class="display-2 text-danger">Genesis Foundation</div>
-                        <div class="display-5 text-muted">Show Off Your Style</div>
-                    </h1>
                 </div>
-            </div>
-        </div>
-    </section>
+                
+                <!-- navbar links -->
+                <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="#shirts" class="nav-link">Shirts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#pants" class="nav-link">Pants</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#jackets" class="nav-link">Jackets</a>
+                        </li>
+                        <li class="nav-item d-md-none">
+                            <a href="#shoes" class="nav-link">Shoes</a>
+                        </li>
+                        <li class="nav-item d-md-none">
+                            <a href="#details" class="nav-link">Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#wishlist" class="nav-link">
+                                <i class="bi bi-bag-heart"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#shoppingcart" class="nav-link">
+                                <i class="bi bi-cart-check"></i>
+                            </a>
+                        </li>
+                        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
+                            Log In
+                        </button>
+                    </ul>
+                </div> 
+            </nav>
 
-        <section class="m-5" id="shirts">
-            <div class="container-lg">
-                <div class="text-center">
-                    <h2>Popular Shirts Catalog</h2>
-                </div>
-
-                <div class="row my-5 align-items-center justify-content-center g-0">
-                    <!-- Product 1 -->
-                    <div class="col-md-3">
-                        <div class="card img-fluid">
-                            <img class="card-img product-image" src="Shopping pics/Solid Drop Shoulder Tee.jpg" alt="Product 1">
-                            <div class="card-body text-center py-4">
-                                <h5 class="card-subtitle">Solid Drop Shoulder Tee</h5>
-                                <hr>
-                                <p class="card-text">R98,00</p>
-                                <a href="" class="btn btn-outline-primary btn-lg mt-3y">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product 2 -->
-                    <div class="col-md-3">
-                        <div class="card img-fluid">
-                            <img class="card-img product-image" src="Shopping pics/Men Mock Neck Drop Shoulder Tee.jpg" alt="Product 2">
-                            <div class="card-body text-center py-4">
-                                <h5 class="card-subtitle">Men Mock Neck Drop Shoulder Tee</h5>
-                                <hr>
-                                <p class="card-text">R247,00</p>
-                                <a href="" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product 3 -->
-                    <div class="col-md-3">
-                        <div class="card img-fluid">
-                            <img class="card-img product-image" src="Shopping pics/Men Solid Drop Shoulder Asymmetrical Hem Tee.jpg" alt="Product 3">
-                            <div class="card-body text-center py-4">
-                                <h5 class="card-subtitle">Men Drop Shoulder Asymmetrical Tee</h5>
-                                <hr>
-                                <p class="card-text">R168,00</p>
-                                <a href="" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
-                            </div>
+            <!-- main intro text -->
+            <section class="id-intro bg-dark">
+                <div class="container-lg">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-md-5 text-center text-md-start">
+                            <h1>
+                                <div class="display-2 text-danger">Genesis Foundation</div>
+                                <div class="display-5 text-muted">Show Off Your Style</div>
+                            </h1>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="m-5" id="pants">
-            <div class="container-lg">
-                <div class="text-center">
-                    <h2>Popular Pants Catalog</h2>
-                </div>
+            <section class="m-5" id="shirts">
+                <div class="container-lg">
+                    <div class="text-center">
+                        <h2>Popular Shirts Catalog</h2>
+                    </div>
 
-                <div class="row my-5 align-items-center justify-content-center g-0">
-                    <!-- Product 4 -->
-                    <div class="col-md-3">
-                        <div class="card img-fluid">
-                            <img class="card-img product-image" src="Shopping pics/Men Solid Ripped Jeans.jpg" alt="Product 4">
-                            <div class="card-body text-center py-4">
-                                <h5 class="card-subtitle">Men Solid Ripped Jeans</h5>
-                                <hr>
-                                <p class="card-text">R382,00</p>
-                                <a href="" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+                    <div class="row my-5 align-items-center justify-content-center g-0">
+                        <!-- Product 1 -->
+                        <div class="col-md-3">
+                            <div class="card img-fluid">
+                                <img class="card-img product-image" src="Shopping pics/Solid Drop Shoulder Tee.jpg" alt="Product 1">
+                                <div class="card-body text-center py-4">
+                                    <h5 class="card-subtitle">Solid Drop Shoulder Tee</h5>
+                                    <hr>
+                                    <p class="card-text">R98,00</p>
+                                    <a href="#shoppingcart" class="btn btn-outline-primary btn-lg mt-3y">Buy Now</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Product 5 -->
-                    <div class="col-md-3">
-                        <div class="card img-fluid">
-                            <img class="card-img product-image" src="Shopping pics/Men Solid Slant Pocket Skinny Jeans.jpg" alt="Product 5">
-                            <div class="card-body text-center py-4">
-                                <h5 class="card-subtitle">Men Solid Slant Pocket Skinny Jeans</h5>
-                                <hr>
-                                <p class="card-text">R367,00</p>
-                                <a href="" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+                        <!-- Product 2 -->
+                        <div class="col-md-3">
+                            <div class="card img-fluid">
+                                <img class="card-img product-image" src="Shopping pics/Men Mock Neck Drop Shoulder Tee.jpg" alt="Product 2">
+                                <div class="card-body text-center py-4">
+                                    <h5 class="card-subtitle">Men Mock Neck Drop Shoulder Tee</h5>
+                                    <hr>
+                                    <p class="card-text">R247,00</p>
+                                    <a href="#shoppingcart" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Product 6 -->
-                    <div class="col-md-3">
-                        <div class="card img-fluid">
-                            <img class="card-img product-image" src="Shopping pics/Men Slogan & Figure Graphic Loose Jeans.jpg" alt="Product 6">
-                            <div class="card-body text-center py-4">
-                                <h5 class="card-subtitle">Men Slogan & Figure Graphic Loose Jeans</h5>
-                                <hr>
-                                <p class="card-text">R462,00</p>
-                                <a href="" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+                        <!-- Product 3 -->
+                        <div class="col-md-3">
+                            <div class="card img-fluid">
+                                <img class="card-img product-image" src="Shopping pics/Men Solid Drop Shoulder Asymmetrical Hem Tee.jpg" alt="Product 3">
+                                <div class="card-body text-center py-4">
+                                    <h5 class="card-subtitle">Men Drop Shoulder Asymmetrical Tee</h5>
+                                    <hr>
+                                    <p class="card-text">R168,00</p>
+                                    <a href="#shoppingcart" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="m-5" id="jackets">
-            <div class="container-lg">
-                <div class="text-center">
-                    <h2>Popular Jacket Catalog</h2>
-                </div>
+            <section class="m-5" id="pants">
+                <div class="container-lg">
+                    <div class="text-center">
+                        <h2>Popular Pants Catalog</h2>
+                    </div>
 
-                <div class="row my-5 align-items-center justify-content-center g-0">
-                    <!-- Product 7 -->
-                    <div class="col-md-3">
-                        <div class="card img-fluid">
-                            <img class="card-img product-image" src="Shopping pics/Men graphic print bomber jacket.jpg" alt="Product 7">
-                            <div class="card-body text-center py-4">
-                                <h5 class="card-subtitle">Men Graphic Print Bomber Jacket</h5>
-                                <hr>
-                                <p class="card-text">R321,00</p>
-                                <a href="" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+                    <div class="row my-5 align-items-center justify-content-center g-0">
+                        <!-- Product 4 -->
+                        <div class="col-md-3">
+                            <div class="card img-fluid">
+                                <img class="card-img product-image" src="Shopping pics/Men Solid Ripped Jeans.jpg" alt="Product 4">
+                                <div class="card-body text-center py-4">
+                                    <h5 class="card-subtitle">Men Solid Ripped Jeans</h5>
+                                    <hr>
+                                    <p class="card-text">R382,00</p>
+                                    <a href="#shoppingcart" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Product 8 -->
-                    <div class="col-md-3">
-                        <div class="card img-fluid">
-                            <img class="card-img product-image" src="Shopping pics/Men dual pocket lapel collar overcoat.jpg" alt="Product 8">
-                            <div class="card-body text-center py-4">
-                                <h5 class="card-subtitle">Men Dual Pocket Lapel Collar Overcoat</h5>
-                                <hr>
-                                <p class="card-text">R556,00</p>
-                                <a href="" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+                        <!-- Product 5 -->
+                        <div class="col-md-3">
+                            <div class="card img-fluid">
+                                <img class="card-img product-image" src="Shopping pics/Men Solid Slant Pocket Skinny Jeans.jpg" alt="Product 5">
+                                <div class="card-body text-center py-4">
+                                    <h5 class="card-subtitle">Men Solid Slant Pocket Skinny Jeans</h5>
+                                    <hr>
+                                    <p class="card-text">R367,00</p>
+                                    <a href="#shoppingcart" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Product 9 -->
-                    <div class="col-md-3">
-                        <div class="card img-fluid ">
-                            <img class="card-img product-image" src="Shopping pics/Men Buckled Pocket Drop Shoulder Jacket.jpg" alt="Product 9">
-                            <div class="card-body text-center py-4">
-                                <h5 class="card-subtitle">Men Buckled Pocket Drop Shoulder Jacket</h5>
-                                <hr>
-                                <p class="card-text">R391,00</p>
-                                <a href="" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+                        <!-- Product 6 -->
+                        <div class="col-md-3">
+                            <div class="card img-fluid">
+                                <img class="card-img product-image" src="Shopping pics/Men Slogan & Figure Graphic Loose Jeans.jpg" alt="Product 6">
+                                <div class="card-body text-center py-4">
+                                    <h5 class="card-subtitle">Men Slogan & Figure Graphic Loose Jeans</h5>
+                                    <hr>
+                                    <p class="card-text">R462,00</p>
+                                    <a href="#shoppingcart" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="m-5" id="shoes">
-            <div class="container-lg">
-                <div class="text-center">
-                    <h2>Popular Shoe Catalog</h2>
-                </div>
-
-                <div class="row my-5 align-items-center justify-content-center g-0">
-                    <!-- Product 10 -->
-                    <div class="col-md-3">
-                        <div class="card img-fluid">
-                            <img class="card-img product-image" src="Shopping pics/Men stitch detail lace-up front canvas shoes.jpg" alt="Product 10">
-                            <div class="card-body text-center py-4">
-                                <h5 class="card-subtitle">Men Stitch Detail Lace-Up Front Canvas Shoe</h5>
-                                <hr>
-                                <p class="card-text">R403,00</p>
-                                <a href="" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product 11 -->
-                    <div class="col-md-3">
-                        <div class="card img-fluid">
-                            <img class="card-img product-image" src="Shopping pics/Men's ultralight breathable fashionable casual eva lace-up.jpg" alt="Product 11">
-                            <div class="card-body text-center py-4">
-                                <h5 class="card-subtitle">Men's Ultralight Breathable Shoe</h5>
-                                <hr>
-                                <p class="card-text">R260,00</p>
-                                <a href="" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product 12 -->
-                    <div class="col-md-3">
-                        <div class="card img-fluid">
-                            <img class="card-img product-image" src="Shopping pics/Men letter graphic high-top slip on shoes.jpg" alt="Product 12">
-                            <div class="card-body text-center py-4">
-                                <h5 class="card-text">Men Letter Graphic High-Top Shoe</h5>
-                                <hr>
-                                <p class="card-text">R316,00</p>
-                                <a href="" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
-                            </div>
-                        </div>    
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer class="bg-white">
-            <div class="container p-5">
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="Shopping pics/logo.jpg" alt="Company Logo" class="img-thumbnail rounded-circle mb-2">
-                    </div>
-                    <div class="form-container my-5 col-md-6">
-                        <label for="name" class="form-label">Name:</label>
-                        <div class="mb-4 input-group">
-                            <span class="input-group-text">
-                                <i class="bi bi-person-fill"></i>
-                            </span>
-                            <input type="text" class="form-control" id="name" placeholder="e.g.Trent">
-                        </div>
-
-                        <label for="email" class="form-label">Email address:</label>
-                        <div class="mb-4 input-group">
-                            <span class="input-group-text">
-                                <i class="bi bi-envelope"></i>
-                            </span>
-                            <input type="email" class="form-control" id="email" placeholder="e.g.trent@example.com">
-                        </div>
-
-                        <label for="phone" class="form-label">Phone number:</label>
-                        <div class="mb-4 input-group">
-                            <span class="input-group-text">
-                                <i class="bi bi-envelope"></i>
-                            </span>
-                            <input type="text" class="form-control" id="phone" placeholder="e.g.068 345 2121">
-                        </div>
-
-                        <div class="mb-4 text-center">
-                            <button type="submit" class="btn btn-secondary">Submit</button>
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </section>
 
-        <!-- Bootstrap JS -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16"></script>
+            <section class="m-5" id="jackets">
+                <div class="container-lg">
+                    <div class="text-center">
+                        <h2>Popular Jacket Catalog</h2>
+                    </div>
 
-        <script>
-            const tooltips = document.querySelectorAll('.it')
-            tooltips.forEach(tip=> {
-                new bootstrap.Tooltip(tip)
-            })
-        </script>
-    </body>
-</html>
+                    <div class="row my-5 align-items-center justify-content-center g-0">
+                        <!-- Product 7 -->
+                        <div class="col-md-3">
+                            <div class="card img-fluid">
+                                <img class="card-img product-image" src="Shopping pics/Men graphic print bomber jacket.jpg" alt="Product 7">
+                                <div class="card-body text-center py-4">
+                                    <h5 class="card-subtitle">Men Graphic Print Bomber Jacket</h5>
+                                    <hr>
+                                    <p class="card-text">R321,00</p>
+                                    <a href="#shoppingcart" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 8 -->
+                        <div class="col-md-3">
+                            <div class="card img-fluid">
+                                <img class="card-img product-image" src="Shopping pics/Men dual pocket lapel collar overcoat.jpg" alt="Product 8">
+                                <div class="card-body text-center py-4">
+                                    <h5 class="card-subtitle">Men Dual Pocket Lapel Collar Overcoat</h5>
+                                    <hr>
+                                    <p class="card-text">R556,00</p>
+                                    <a href="#shoppingcart" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 9 -->
+                        <div class="col-md-3">
+                            <div class="card img-fluid ">
+                                <img class="card-img product-image" src="Shopping pics/Men Buckled Pocket Drop Shoulder Jacket.jpg" alt="Product 9">
+                                <div class="card-body text-center py-4">
+                                    <h5 class="card-subtitle">Men Buckled Pocket Drop Shoulder Jacket</h5>
+                                    <hr>
+                                    <p class="card-text">R391,00</p>
+                                    <a href="#shoppingcart" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="m-5" id="shoes">
+                <div class="container-lg">
+                    <div class="text-center">
+                        <h2>Popular Shoe Catalog</h2>
+                    </div>
+
+                    <div class="row my-5 align-items-center justify-content-center g-0">
+                        <!-- Product 10 -->
+                        <div class="col-md-3">
+                            <div class="card img-fluid">
+                                <img class="card-img product-image" src="Shopping pics/Men stitch detail lace-up front canvas shoes.jpg" alt="Product 10">
+                                <div class="card-body text-center py-4">
+                                    <h5 class="card-subtitle">Men Stitch Detail Lace-Up Front Canvas Shoe</h5>
+                                    <hr>
+                                    <p class="card-text">R403,00</p>
+                                    <a href="#shoppingcart" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 11 -->
+                        <div class="col-md-3">
+                            <div class="card img-fluid">
+                                <img class="card-img product-image" src="Shopping pics/Men's ultralight breathable fashionable casual eva lace-up.jpg" alt="Product 11">
+                                <div class="card-body text-center py-4">
+                                    <h5 class="card-subtitle">Men's Ultralight Breathable Shoe</h5>
+                                    <hr>
+                                    <p class="card-text">R260,00</p>
+                                    <a href="#shoppingcart" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 12 -->
+                        <div class="col-md-3">
+                            <div class="card img-fluid">
+                                <img class="card-img product-image" src="Shopping pics/Men letter graphic high-top slip on shoes.jpg" alt="Product 3">
+                                <div class="card-body text-center py-4">
+                                    <h5 class="card-text">Men Letter Graphic High-Top Shoe</h5>
+                                    <hr>
+                                    <p class="card-text">R316,00</p>
+                                    <a href="#shoppingcart" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="bg-white" id="details">
+                <div class="container p-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="Shopping pics/logo.jpg" alt="Company Logo" class="img-thumbnail rounded-circle mb-2">
+                        </div>
+                        <div class="form-container my-5 col-md-6">
+                            <label for="name" class="form-label">Name:</label>
+                            <div class="mb-4 input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-person-fill"></i>
+                                </span>
+                                <input type="text" class="form-control" id="name" placeholder="e.g.Trent">
+                            </div>
+
+                            <label for="email" class="form-label">Email address:</label>
+                            <div class="mb-4 input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-envelope"></i>
+                                </span>
+                                <input type="email" class="form-control" id="email" placeholder="e.g.trent@example.com">
+                            </div>
+                                
+                            <label for="phone" class="form-label">Phone number:</label>
+                            <div class="mb-4 input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-envelope"></i>
+                                </span>
+                                <input type="text" class="form-control" id="phone" placeholder="e.g.068 345 2121">
+                            </div>
+
+                            <div class="mb-4 text-center">
+                                <button type="submit" class="btn btn-secondary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- Bootstrap JS -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16"></script>
+
+            <script>
+                const tooltips = document.querySelectorAll('.it')
+                tooltips.forEach(tip=> {
+                    new bootstrap.Tooltip(tip)
+                })
+            </script>
+        </body>
+    </html>
